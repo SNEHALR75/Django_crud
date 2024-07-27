@@ -1,0 +1,15 @@
+{% extends 'app1/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1 style="text-align:center" class="p-2 m-2">Register Food</h1>
+
+<div class="container border solid 1px w-50 p-2 m-2 mx-auto bg-secondary rounded-2">
+    <form method="post">
+        {% csrf_token %}
+            {{form|crispy}}
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}

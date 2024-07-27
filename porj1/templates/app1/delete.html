@@ -1,0 +1,13 @@
+{% extends 'app1/layout.html' %}
+
+{% block content %}
+
+<div class="container border solid 2px w-50 p-2 m-2 mx-auto">
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want delete {{f1}}</p>
+        <a href="/show/"><input type="button" value="No Cancel" class="btn btn-secondary"></a>
+        <a href="/show/"><input type="submit" value="Yes Delete" class="btn btn-danger"></a>
+    </form>
+</div>
+{% endblock %}
